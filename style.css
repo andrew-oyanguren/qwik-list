@@ -1,0 +1,155 @@
+/***** Global Presets *****/
+:root {
+  --clr-primary: rgb(245, 245, 245);
+  --clr-secondary: rgb(172, 135, 135);
+  --clr-accent: rgb(80, 70, 63);
+  --clr-text: rgb(20, 20, 20);
+
+  --ff-primary: 'Lato', sans-serif;
+  --ff-accent: 'Roboto', sans-serif;
+
+  --fs-default: 16px;
+  --br-primary: 4px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-default);
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+
+/***** HTML Styles *****/
+
+/*** header ***/
+header {
+  background:url('./img/list-bg3.jpg') 100% 40%;
+  text-align: center;
+  margin-top: 4rem;
+  border-radius: var(--br-primary);
+}
+
+header > h1 {
+  font-size: calc(var(--fs-default) * 4);
+  color: var(--clr-accent);
+  padding: 2rem 0;
+}
+
+/* input and button */
+form {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form > input,
+form > button {
+  outline: none;
+  border: none;
+  font-size: calc(var(--fs-default) * 2);
+}
+
+form > input {
+  box-shadow: 0 0 8px var(--clr-accent);
+  font-family: var(--ff-accent);
+  border-radius: var(--br-primary);
+}
+
+
+form > button {
+  background: none;
+  padding-left: 1rem;
+  color: var(--clr-accent);
+}
+
+form > button:hover {
+  cursor: pointer;
+  color: var(--clr-secondary);
+}
+
+
+
+/*** list container ***/
+.list-container {
+  margin-top: 2rem;
+}
+
+.list-wrapper {
+  background-color: var(--clr-primary);                
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--br-primary);
+}
+
+.list-wrapper:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.253);
+}
+
+.list-item {
+  flex: 1;
+  font-family: var(--ff-accent);
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+/* add text-decoration */
+
+.cross-out {
+  text-decoration: line-through;
+  color: rgb(146, 146, 146);
+  font-size: 1.25rem;
+}
+
+/* delete button */
+.list-wrapper  button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  color: var(--clr-accent);
+  background-color: var(--clr-primary);
+}
+
+.list-wrapper  button:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.116);
+}
+
+/* checkbox */
+.list-wrapper input {
+  display: none;
+}
+
+.list-wrapper input + label {
+  cursor: pointer;
+}
+
+/* <i> tag */
+.fa-minus {
+  color: var(--clr-secondary);
+  pointer-events: none;
+}
